@@ -52,6 +52,7 @@ html {
  box-sizing: inherit;
 }
 
+
 h2 {
  font-size: 3rem;
  font-weight: 600;
@@ -216,6 +217,66 @@ li {
  span {
   color: $verde;
  }
+}
+
+header {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    pre {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.categoria-productos {
+  display: block;
+  h2 {
+    display: flex;
+    place-content: center;
+    color: $azul_secundario;
+  }
+  form {
+    display: flex;
+    .boton-agregar {
+      margin-left: 2rem;
+    }
+  }
+  table {
+    display: block;
+    margin: 2rem auto;
+    tbody {
+      display: block;
+      margin: 0 auto;
+      width: max-content;
+      th {
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem;
+        color: $azul_secundario;
+        border: solid 0.1rem $azul_secundario;
+
+      }
+      td {
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 1rem;
+        border: solid 0.1rem $verde;
+        font-weight: 500;
+
+        .cantidad {
+          width: 5rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
 }
 
 .collections {
@@ -390,11 +451,12 @@ li {
   }
  }
  .flechas-carrusel {
-  display:flex;
+  display: flex;
   justify-content: end;
   gap: 1rem;
-  .flecha-izquierda, .flecha-derecha {
-    display: inline-flex;
+  .flecha-izquierda,
+  .flecha-derecha {
+   display: inline-flex;
   }
  }
 }
@@ -801,6 +863,14 @@ li {
    width: 100%;
    display: visible;
   }
+ }
+}
+
+.categories-container,
+.categorias {
+ img {
+  width: 20rem;
+  max-height: 26rem;
  }
 }
 

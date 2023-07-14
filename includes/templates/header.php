@@ -2,14 +2,16 @@
   <header class="header container">
     <div class="nav-bar">
       <div class="logo">
+        <a href="/Ecommerce/index.php">
         <img src="/Ecommerce/build/img/header/logo-u-shop-azul.svg" alt="logo Universae">
+        </a>
       </div>
       <div class="nav-links">
         <ul>
-          <li><a href="#">Textil</a></li>
-          <li><a href="#">Papelería</a></li>
-          <li><a href="#">Accesorios</a></li>
-          <li><a href="#">Categorías</a></li>
+          <li><a href="/Ecommerce/textil.php">Textil</a></li>
+          <li><a href="/Ecommerce/papeleria.php">Papelería</a></li>
+          <li><a href="/Ecommerce/accesorios.php">Accesorios</a></li>
+          <li><a href="/Ecommerce/categorias.php">Categorías</a></li>
           <li><a href="#">UNIVERSAE</a></li>
           <li class="burger_menu"><img src="/Ecommerce/build/img/header/burger_menu.svg" alt=""></li>
         </ul>

@@ -32,8 +32,8 @@ function comprobar_session()
 function saludar_usuario()
 {
   if (isset($_SESSION['nombre'])) {
-    $nombre = mb_convert_case($_SESSION['nombre'], MB_CASE_TITLE, "UTF-8");
-    return "Te damos la bienvenida a Universae Store <span>$nombre.</span>";
+    $nombre = trim(mb_convert_case($_SESSION['nombre'], MB_CASE_TITLE, "UTF-8"));
+    return "Te damos la bienvenida a Universae Store" . "<pre> </pre>" . "<span>$nombre.</span>";
   }
 }
 
@@ -91,4 +91,29 @@ function existe_session()
   if (empty(session_id())) {
     session_start();
   }
+}
+
+function cargar_categorias() {
+  $bd = obtener_conexion();
+  $res = $bd->prepare('SELECT * FROM categorias');
+  $res->execute();
+  $bd = null;
+  return $res->fetchAll();
+}
+
+function cargar_categoria($categoria) {
+  $bd = obtener_conexion();
+  $res = $bd->prepare("SELECT * FROM categorias WHERE id = $categoria");
+  $res->execute();
+  $bd = null;
+  return $res->fetch();
+}
+
+function cargar_productos_categoria($categoria_id) {
+  $bd = obtener_conexion();
+  $res = $bd->prepare('SELECT * FROM productos WHERE categoria_id = ?');
+  //die(var_dump($categoria_id));
+  $res->execute([$categoria_id]);
+  $bd = null;
+  return $res->fetchAll();
 }

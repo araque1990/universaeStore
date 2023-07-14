@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/Controllers/categories_controller.php";
 require_once 'includes/funciones.php';
 // inicia la sesión
 existe_session();
@@ -144,7 +145,7 @@ includeTemplate('head');
           </ul>
         </div>
         <button class="green-button">
-          <a href="/Ecommerce/productos-papeleria.php">VER MÁS</a>
+          <a href="change-your-way-collection.php">VER MÁS</a>
         </button>
       </div>
     </section>
